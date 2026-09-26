@@ -231,7 +231,7 @@ async function main() {
    // --- 6. Connection test ---
    const testSpinner = p.spinner()
    testSpinner.start('Testing the connection to GitHub...')
-   const test = spawnSync('ssh', ['-T', 'git@github.com'], {
+   const test = spawnSync('ssh', ['-o', 'StrictHostKeyChecking=accept-new', '-T', 'git@github.com'], {
       encoding: 'utf-8',
       timeout: 15000,
    })
