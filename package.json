@@ -1,0 +1,28 @@
+{
+   "name": "ssh-github-setup",
+   "version": "1.0.0",
+   "module": "index.ts",
+   "type": "module",
+   "description": "Generates and configures an SSH key for GitHub, with prompts in the @clack/prompts style",
+   "author": "Emerson Bernardini",
+   "license": "MIT",
+   "homepage": "https://github.com/emersonbernardini/ssh-github-setup",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/emersonbernardini/ssh-github-setup.git"
+   },
+   "private": true,
+   "devDependencies": {
+      "@types/bun": "latest"
+   },
+   "scripts": {
+      "start": "bun run .",
+      "build": "bun build ./index.ts --compile --outfile ssh-github-setup"
+   },
+   "peerDependencies": {
+      "typescript": "^7"
+   },
+   "dependencies": {
+      "@clack/prompts": "^1.8.1"
+   }
+}

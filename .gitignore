@@ -1,0 +1,5 @@
+node_modules/
+ssh-github-setup
+ssh-github-setup-*
+*.log
+.DS_Store
