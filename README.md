@@ -66,6 +66,14 @@ chmod +x ssh-github-setup
 (swap `bun-linux-x64` for `bun-linux-arm64`, `bun-darwin-x64`, or
 `bun-darwin-arm64` depending on your system)
 
+> **Termux (Android) note:** the prebuilt Linux binaries target glibc and
+> won't run under Termux, since it uses Android's Bionic libc instead
+> (you'll see an error like `Check the interpreter or linker?` or
+> `cannot execute binary file`). On Termux, use
+> [Run directly](#run-directly-no-build-step) with `bun run start`
+> instead — or run the binary inside a glibc-based container (e.g. via
+> `proot-distro`), which works fine since it's a real Linux userland.
+
 ## License
 
 [MIT](./LICENSE)
